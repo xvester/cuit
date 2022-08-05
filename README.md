@@ -33,7 +33,7 @@ $cuit = 20111111112;
 try {
     $cuit_valuido = CUIT::validar($cuit);  // Devuelve true o false
     print_r($cuit_valido);
-} catch (CUITExcepcion $e) {
+} catch (CUITException $e) {
     echo $e->getMessage();
 }
 
@@ -53,7 +53,7 @@ $sexo    = 'M;
 try {
     $cuit_generado = CUIT::generar($cuit, $sexo);
     print_r($cuit_generado);
-} catch (CUITExcepcion $e) {
+} catch (CUITException $e) {
     echo $e->getMessage();
 }
 
